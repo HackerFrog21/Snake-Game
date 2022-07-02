@@ -36,6 +36,14 @@ body {
     background-color: red;
 }
 
+code {
+    position: absolute;
+    color: white;
+    user-select: none;
+    bottom: 4vmin;
+    font-size: 2vmin;
+}
+
 .menu {
     width: 80vmin;
     height: 80vmin;
