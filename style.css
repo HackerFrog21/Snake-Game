@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    width: 80vmin;
+    height: 80vmin;
+    background-color: lightgray;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.snake {
+    background-color: darkgreen;
+}
+
+.snake-body {
+    background-color: #729B79;
+}
+
+.food {
+    background-color: red;
+}
+
+.menu {
+    width: 80vmin;
+    height: 80vmin;
+    background-color: gray;
+    position: absolute;
+    transition: filter 0.5s;
+    user-select: none;
+    font-size: 4vmin;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.menu--transparent {
+    filter: opacity(0);
+}
+
+.menu > p {
+    font-size: 8vmin;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    animation: title-screen 1s linear infinite alternate ;
+}
+
+@keyframes title-screen {
+    from {transform:  translate(-50%, 25%)}
+    to {transfrom: translate(-50%, -50%)}
+}
+
+.menu div {
+    display: inline-block;
+    background-color: #f5f5dc;
+    width: 30vmin;
+    height: 7.5vmin;
+    position: absolute;
+    left: 50%;
+}
+
+.easy {
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.normal {
+    top: 82%;
+    transform: translate(-50%, -50%);
+}
+
+.menu div p {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu div:hover {
+    background-color: #e0e0bf;
+}
+
+.scoreboard {
+    height: 10vmin;
+    width: 80vmin;
+    position: absolute;
+    top: 0px;
+}
+
+.scoreboard p {
+    color: white;
+    position: absolute;
+    font-size: 3vmin;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    top: 40%;
+    transform: translate(0%, -50%);
+}
+
+.scoreboard .score {
+    left: 25%;
+    transform: translate(-50%);
+}
+
+.scoreboard .highscore {
+    left: 75%;
+    transform: translate(-50%);
+}
+
+.game-over-screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    background-color: black;
+    transition: filter 1s;
+}
+
+.game-over-screen--show-1 {
+    display: block;
+    filter: opacity(0);
+}
+.game-over-screen--show-2 {
+    filter: opacity(1);
+}
+
+.game-over-screen p {
+    width: 100vw;
+    text-align: center;
+    color: white;
+    position: absolute;
+    font-size: 10vmin;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
